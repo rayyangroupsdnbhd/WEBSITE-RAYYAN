@@ -1,0 +1,629 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rayyan Aisy Production</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://i.ytimg.com" crossorigin>
+  <link rel="preconnect" href="https://www.youtube.com" crossorigin>
+  <link rel="preload" as="image" href="./assets/hero/1.jpg">
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32.png">
+  <link rel="apple-touch-icon" href="/assets/icons/favicon-180.png">
+  
+<link rel="manifest" href="./site.webmanifest">
+  <style>
+    :root{--bg:#000000;}
+    html,body{background:#000000;}
+
+    .video-background {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      overflow: hidden;
+      background: #000;
+    }
+    .video-fallback {
+      position: absolute;
+      inset: 0;
+      background: #000;
+    }
+    
+    .hero-slides {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    .hero-slide {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 0.8s ease;
+    }
+    .hero-slide.active {
+      opacity: 1;
+    }
+
+    #bgLogo {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      pointer-events: none;
+    }
+    body.hide-video .hero-slides {
+      opacity: 0;
+      pointer-events: none;
+    }
+    body.hide-video #bgVideo {
+      opacity: 0 !important;
+    }
+
+
+    .gallery-wrapper {
+      margin-top: 2rem;
+      position: relative;
+      overflow: hidden;
+      border-radius: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(0, 0, 0, 0.8);
+    }
+    .gallery-track {
+      display: flex;
+      transition: transform 0.4s ease-in-out;
+      will-change: transform;
+      touch-action: pan-y;
+    }
+    .gallery-item {
+      position: relative;
+      flex: 0 0 auto;
+      overflow: hidden;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .gallery-controls {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      pointer-events: none;
+      padding: 0 0.4rem;
+    }
+    .gallery-btn {
+      pointer-events: auto;
+      border: none;
+      border-radius: 999px;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      background: rgba(0, 0, 0, 0.65);
+      color: #fff;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      #bgLogo {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  </style>
+
+  <meta name="theme-color" content="#0B0D10">
+  <link rel="icon" href="/assets/icons/favicon.ico" sizes="any">
+  <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="favicon.ico">
+  
+</head>
+<body id="top">
+  <!-- Fixed background layers -->
+  
+  <div class="video-background">
+    <div class="video-fallback"></div>
+    <div class="bg-orbit"></div>
+    <div class="hero-slides">
+      <img class="hero-slide active" src="./assets/hero/1.jpg" alt="Hero 1">
+      <img class="hero-slide" src="./assets/hero/2.jpg" alt="Hero 2">
+      <img class="hero-slide" src="./assets/hero/3.jpg" alt="Hero 3">
+      <img class="hero-slide" src="./assets/hero/4.jpg" alt="Hero 4">
+      <img class="hero-slide" src="./assets/hero/5.jpg" alt="Hero 5">
+      <img class="hero-slide" src="./assets/hero/6.jpg" alt="Hero 6">
+      <img class="hero-slide" src="./assets/hero/7.jpg" alt="Hero 7">
+      <img class="hero-slide" src="./assets/hero/8.jpg" alt="Hero 8">
+      <img class="hero-slide" src="./assets/hero/9.jpg" alt="Hero 9">
+      <img class="hero-slide" src="./assets/hero/10.jpg" alt="Hero 10">
+    </div>
+    <img id="bgLogo" src="./assets/Rayyan Aisy Production Logo_00000.png" alt="Rayyan Aisy Production">
+  </div>
+
+<!-- Sticky nav -->
+  
+  <header>
+    <div class="container nav-wrap">
+      <div class="brand">
+        <img src="./assets/logo.png" alt="Rayyan Aisy Production logo" width="64" height="64">
+        <strong class="brand-title">RAYYAN AISY PRODUCTION</strong>
+      </div>
+      <nav>
+        <a href="#home" data-spy="home">Home</a>
+        <a href="#hero" data-spy="ourworks">Our Works</a>
+        <a href="#showreel" data-spy="showreel">Showreel</a>
+        <a href="#services" data-spy="services">Services</a>
+        <a href="#gallery" data-spy="gallery">Gallery</a>
+        <a href="#contact" data-spy="contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <main>
+    <section class="landing" id="home"></section>
+
+    <section class="hero" id="hero">
+      <div class="hero-text container">
+        <h1>Your Vision,<br>Our Production.</h1>
+        <p>We craft cinematic brand experiences through video, event staging, CGI, and live media production.</p>
+        <a class="btn btn-primary" href="https://www.youtube.com/playlist?list=PLIJALYiv-KISl1X5I3hEHGHhkMKlx5ZOL" target="_blank" rel="noopener">Our Works</a>
+      </div>
+    </section>
+
+    
+    <section class="player" id="showreel">
+      <div class="container center">
+        <h2 class="title">Showreel</h2>
+        <div class="video-wrap">
+          <iframe
+            src="https://www.youtube.com/embed/-oe6WL2_2Rc"
+            title="Showreel"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="stacked-bg">
+    <div class="section-cover" aria-hidden="true"></div>
+
+    
+    <section class="section-visual" id="services">
+      <div class="container center services-layout">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+          <article class="service-panel">
+            <div class="service-media"><img src="./assets/services/event-management.jpg" alt="event-management"></div>
+            <div class="service-panel-body">
+              <h3>Event Management</h3>
+              <ul>
+                <li>Exhibition</li>
+                <li>Conference</li>
+                <li>Gala Dinner</li>
+                <li>Seminar</li>
+                <li>Carnival</li>
+                <li>Launching Ceremony</li>
+                <li>Gimmick &amp; Montage</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="service-panel">
+            <div class="service-media"><img src="./assets/services/branding-amp-design.jpg" alt="branding-amp-design"></div>
+            <div class="service-panel-body">
+              <h3>Branding &amp; Design</h3>
+              <ul>
+                <li>Key Art Visual</li>
+                <li>Creative Concept</li>
+                <li>Graphic Design</li>
+                <li>Digital Design</li>
+                <li>Printed Design</li>
+                <li>Website Layout</li>
+                <li>3D Structure</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="service-panel">
+            <div class="service-media"><img src="./assets/services/video-multimedia-services.jpg" alt="video-multimedia-services"></div>
+            <div class="service-panel-body">
+              <h3>Video Multimedia Services</h3>
+              <ul>
+                <li>Corporate Video</li>
+                <li>Multimedia Presentation</li>
+                <li>Multi Camera Production (MCP)</li>
+                <li>Launching Video (Montage)</li>
+                <li>Event Coverage Video</li>
+                <li>Storyboard</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="service-panel">
+            <div class="service-media"><img src="./assets/services/event-equipment-services.jpg" alt="event-equipment-services"></div>
+            <div class="service-panel-body">
+              <h3>Event Equipment Services</h3>
+              <ul>
+                <li>Sound System</li>
+                <li>Lighting System</li>
+                <li>LED Backdrop</li>
+                <li>Truss System</li>
+                <li>Photobooth</li>
+                <li>Roving LED Truck</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="service-panel">
+            <div class="service-media"><img src="./assets/services/digital-marketing.jpg" alt="digital-marketing"></div>
+            <div class="service-panel-body">
+              <h3>Digital Marketing</h3>
+              <ul>
+                <li>Social Media Posting</li>
+                <li>Visualization</li>
+                <li>Copywriting</li>
+                <li>Media Content</li>
+                <li>Advertising</li>
+                <li>Monitoring Data</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="service-panel">
+            <div class="service-media"><img src="./assets/services/car-rental-services.jpg" alt="car-rental-services"></div>
+            <div class="service-panel-body">
+              <h3>Car Rental Services</h3>
+              <ul>
+                <li>Premium MPV &amp; sedan rental for VIPs and guests</li>
+                <li>Chauffeur service for events, shoots and meetings</li>
+                <li>Branded vehicles for roadshows and campaign tours</li>
+                <li>Airport transfer &amp; hotel shuttle arrangements</li>
+                <li>Custom packages for wedding and corporate events</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    
+    
+    <section id="gallery" class="section section-gallery">
+  <div class="container">
+    <div class="section-title">
+      <h2>FEATURED EVENTS GALLERY</h2>
+      <p>
+        Describe your signature shows, government events, launches or year highlights here.
+        Edit this text directly in <strong>index.html</strong>.
+      </p>
+    </div>
+
+    <div class="fg-carousel">
+      <button class="fg-nav fg-prev" aria-label="Previous event">‹</button>
+
+      <div class="fg-viewport">
+        <div class="fg-track">
+          <!-- Slides injected by js/gallery-home.js -->
+        </div>
+      </div>
+
+      <button class="fg-nav fg-next" aria-label="Next event">›</button>
+    </div>
+  </div>
+</section>
+
+
+<section class="section-visual align-top" id="contact">
+      <div class="container center" style="align-items:center;">
+        <h2>Contact</h2>
+        <p style="margin-top:12px;line-height:1.7">
+          WhatsApp: <a href="https://wa.me/60164205563" style="color:var(--gold)">+6016-420-5563</a><br>
+          Email: <a href="mailto:rayyangroupsdnbhd@gmail.com" style="color:var(--gold)">rayyangroupsdnbhd@gmail.com</a><br>
+          Address: S-50A-1-13, (The Hub) Pearl Avenue, Jalan Pasir Emas, Sungai Chua, 43000 Kajang, Selangor Darul Ehsan.
+        </p>
+        <div class="socials">
+          <a href="https://www.facebook.com/p/Rayyan-Aisy-Production-61577325873569/" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.instagram.com/rayyanaisyproduction/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.tiktok.com/@rayyan_aisy_production" target="_blank" rel="noopener">TikTok</a>
+          <a href="https://www.youtube.com/@RayyanAisyProduction" target="_blank" rel="noopener">YouTube</a>
+          <a href="mailto:rayyangroupsdnbhd@gmail.com">Email</a>
+        </div>
+        <div class="map-embed">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.4044335403873!2d101.7806659!3d2.9851404999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc35f0d4ccce73%3A0x7a69638972d2d6c6!2sAisy%20Works%20Venture!5e0!3m2!1sen!2smy!4v1762922256717!5m2!1sen!2smy" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen=""></iframe>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <a class="whatsapp" href="https://wa.me/60164205563?text=Hi%20Rayyan%20Aisy%20Production%2C%20saya%20berminat%20nak%20tanya%20tentang..." target="_blank" rel="noopener">WhatsApp Us</a>
+
+  <footer class="footer">RAYYAN AISY PRODUCTION SDN. BHD.</footer>
+
+  
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Hero background slideshow (images 1-10.jpg inside /assets/hero)
+      const heroSlides = Array.from(document.querySelectorAll('.hero-slide'));
+      let heroIndex = 0;
+      if (heroSlides.length) {
+        function showHeroSlide(i) {
+          heroSlides.forEach((img, idx) => {
+            img.classList.toggle('active', idx === i);
+          });
+        }
+        showHeroSlide(0);
+        setInterval(() => {
+          heroIndex = (heroIndex + 1) % heroSlides.length;
+          showHeroSlide(heroIndex);
+        }, 5000);
+      }
+
+      // Toggle background visibility based on section (home/hero/showreel only)
+      const sections = document.querySelectorAll('main section');
+      function updateBackgroundVisibility() {
+        let current = 'home';
+        const top = window.scrollY || document.documentElement.scrollTop;
+        sections.forEach((sec) => {
+          const offset = sec.offsetTop - 140;
+          const height = sec.offsetHeight;
+          if (top >= offset && top < offset + height) {
+            current = sec.id || current;
+          }
+        });
+        if (['home', 'hero', 'showreel'].includes(current)) {
+          document.body.classList.remove('hide-video');
+        } else {
+          document.body.classList.add('hide-video');
+        }
+      }
+      window.addEventListener('scroll', updateBackgroundVisibility, { passive: true });
+      window.addEventListener('load', updateBackgroundVisibility);
+      updateBackgroundVisibility();
+
+      // ===== Gallery 3-card carousel (unlimited images, 3 visible: center + scaled sides) =====
+      const GALLERY_TITLES = {
+        1: 'Featured Event 1',
+        2: 'Featured Event 2',
+        3: 'Featured Event 3'
+        // Add more here: 4: 'Event title 4', 5: 'Event title 5', etc.
+      };
+
+      const galleryWrapper = document.getElementById('galleryWrapper');
+      const galleryTrack = document.getElementById('galleryTrack');
+
+      function initGalleryWithSources(sources) {
+        if (!galleryWrapper || !galleryTrack || !sources.length) return;
+
+        sources.sort((a, b) => a.index - b.index);
+
+        sources.forEach((item) => {
+          const idx = item.index;
+          const link = document.createElement('a');
+          link.className = 'gallery-item';
+          link.href = `./gallery/event${idx}.html`;
+          link.dataset.index = String(idx);
+
+          const img = document.createElement('img');
+          img.loading = 'lazy';
+          img.src = item.src;
+          img.alt = `Gallery ${idx}`;
+          link.appendChild(img);
+
+          const caption = document.createElement('div');
+          caption.className = 'gallery-caption';
+          caption.textContent = GALLERY_TITLES[idx] || `Featured Event ${idx}`;
+          link.appendChild(caption);
+
+          galleryTrack.appendChild(link);
+        });
+
+        const galleryItems = Array.from(galleryTrack.querySelectorAll('.gallery-item'));
+        const total = galleryItems.length;
+        const prevBtn = document.getElementById('galleryPrev');
+        const nextBtn = document.getElementById('galleryNext');
+
+        let centerIndex = 0;
+        let autoTimer = null;
+
+        function updateView() {
+          if (!total) return;
+
+          const isMobile = window.innerWidth <= 768;
+          const leftIndex = (centerIndex - 1 + total) % total;
+          const rightIndex = (centerIndex + 1) % total;
+
+          galleryItems.forEach((item, i) => {
+            item.classList.remove(
+              'is-center',
+              'is-side',
+              'is-left',
+              'is-right',
+              'is-hidden',
+              'is-side-left',
+              'is-side-right'
+            );
+
+            if (i === centerIndex) {
+              item.classList.add('is-center');
+            } else if (!isMobile && i === leftIndex) {
+              item.classList.add('is-side-left');
+            } else if (!isMobile && i === rightIndex) {
+              item.classList.add('is-side-right');
+            } else {
+              item.classList.add('is-hidden');
+            }
+          });
+        }
+
+        function goNext() {
+          centerIndex = (centerIndex + 1) % total;
+          updateView();
+        }
+
+        function goPrev() {
+          centerIndex = (centerIndex - 1 + total) % total;
+          updateView();
+        }
+
+        function startAuto() {
+          if (autoTimer) clearInterval(autoTimer);
+          autoTimer = setInterval(goNext, 5000);
+        }
+
+        function restartAuto() {
+          startAuto();
+        }
+
+        if (prevBtn) {
+          prevBtn.addEventListener('click', () => {
+            goPrev();
+            restartAuto();
+          });
+        }
+        if (nextBtn) {
+          nextBtn.addEventListener('click', () => {
+            goNext();
+            restartAuto();
+          });
+        }
+
+        let startX = 0;
+        let isDragging = false;
+
+        function handleStart(e) {
+          isDragging = true;
+          startX = e.touches ? e.touches[0].clientX : e.clientX;
+        }
+
+        function handleEnd(e) {
+          if (!isDragging) return;
+          isDragging = false;
+          const endX = e.changedTouches ? e.changedTouches[0].clientX : e.clientX;
+          const diff = endX - startX;
+          if (Math.abs(diff) > 50) {
+            if (diff < 0) {
+              goNext();
+            } else {
+              goPrev();
+            }
+            restartAuto();
+          }
+        }
+
+        if (galleryWrapper) {
+          galleryWrapper.addEventListener('mousedown', handleStart);
+          galleryWrapper.addEventListener('mouseup', handleEnd);
+          galleryWrapper.addEventListener('mouseleave', () => { isDragging = false; });
+          galleryWrapper.addEventListener('touchstart', handleStart, { passive: true });
+          galleryWrapper.addEventListener('touchend', handleEnd);
+        }
+
+        window.addEventListener('resize', updateView);
+        updateView();
+        startAuto();
+      }
+
+if (galleryWrapper && galleryTrack) {
+        let initialized = false;
+
+        
+        function runLoader() {
+          if (initialized) return;
+          initialized = true;
+
+          fetch('./gallery/list.json')
+            .then(resp => resp.json())
+            .then(data => {
+              const files = Array.isArray(data.images)
+                ? data.images
+                : (Array.isArray(data) ? data : []);
+              if (!files.length) return;
+
+              const candidates = files.map((name, idx) => ({
+                name,
+                originalIndex: idx
+              }));
+
+              const validSources = [];
+              let finished = 0;
+
+              function maybeInit() {
+                finished += 1;
+                if (finished === candidates.length && validSources.length) {
+                  // sort by numeric index so the 3-card logic uses 1,2,3,... properly
+                  validSources.sort((a, b) => a.index - b.index);
+                  initGalleryWithSources(validSources);
+                }
+              }
+
+              candidates.forEach((file) => {
+                const src = `./gallery/${file.name || file}`;
+                const test = new Image();
+                test.onload = () => {
+                  const match = String(file.name || file).match(/(\d+)/);
+                  const index = match ? parseInt(match[1], 10) : (validSources.length + 1);
+                  validSources.push({ index, src });
+                  maybeInit();
+                };
+                test.onerror = () => {
+                  console.warn('Gallery image missing or broken:', src);
+                  maybeInit();
+                };
+                test.src = src;
+              });
+            })
+            .catch(err => {
+              console.error('Failed to load gallery list.json', err);
+            });
+        }
+
+        const gallerySection = document.getElementById('gallery');
+
+        if ('IntersectionObserver' in window && gallerySection) {
+          const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                runLoader();
+                obs.disconnect();
+              }
+            });
+          }, { threshold: 0.2 });
+          observer.observe(gallerySection);
+        } else {
+          runLoader();
+        }
+      }
+    });
+  </script>
+  <script src="./js/gallery-home.js"></script>
+
+</body>
+</html>

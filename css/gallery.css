@@ -1,0 +1,7 @@
+
+.gallery-container{display:flex;justify-content:center;margin:40px auto;}
+.carousel{display:flex;gap:40px;align-items:center;}
+.carousel-item{opacity:0.4;transform:scale(0.8);transition:0.4s;}
+.carousel-item.active{opacity:1;transform:scale(1);}
+.carousel-item img{width:400px;border-radius:20px;}
+.caption{text-align:center;margin-top:10px;color:white;font-size:14px;}

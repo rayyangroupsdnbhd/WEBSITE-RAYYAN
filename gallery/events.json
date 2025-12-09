@@ -1,0 +1,54 @@
+{
+  "events": [
+    {
+      "folder": "event1",
+      "cover": "1.jpg",
+      "title": "Event1"
+    },
+    {
+      "folder": "event10",
+      "cover": null,
+      "title": "Event10"
+    },
+    {
+      "folder": "event2",
+      "cover": "2.jpg",
+      "title": "Event2"
+    },
+    {
+      "folder": "event3",
+      "cover": "3.jpg",
+      "title": "Event3"
+    },
+    {
+      "folder": "event4",
+      "cover": "4.jpg",
+      "title": "Event4"
+    },
+    {
+      "folder": "event5",
+      "cover": "5.jpg",
+      "title": "Event5"
+    },
+    {
+      "folder": "event6",
+      "cover": null,
+      "title": "Event6"
+    },
+    {
+      "folder": "event7",
+      "cover": null,
+      "title": "Event7"
+    },
+    {
+      "folder": "event8",
+      "cover": null,
+      "title": "Event8"
+    },
+    {
+      "folder": "event9",
+      "cover": null,
+      "title": "Event9"
+    }
+  ]
+}
