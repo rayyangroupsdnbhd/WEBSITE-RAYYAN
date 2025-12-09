@@ -19,23 +19,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (!images.length) return;
 
-      images.forEach((fileName, index) => {
-        const slide = document.createElement('a');
-        slide.className = 'fg-slide';
-        slide.href = `./gallery/event${index + 1}.html`;
+      images.forEach((item) => {
+  const idx = item.index || 0;
 
-        const img = document.createElement('img');
-        img.src = `./gallery/${fileName}`;
-        img.alt = `Featured Event ${index + 1}`;
+  const slide = document.createElement('a');
+  slide.className = 'fg-slide';
+  slide.href = `./gallery/event${idx}.html`;
 
-        const caption = document.createElement('div');
-        caption.className = 'fg-caption';
-        caption.textContent = `Featured Event ${index + 1}`;
+  const img = document.createElement('img');
+  img.src = `./gallery/${item.src}`;
+  img.alt = item.title || `Featured Event ${idx}`;
 
-        slide.appendChild(img);
-        slide.appendChild(caption);
-        track.appendChild(slide);
-      });
+  const caption = document.createElement('div');
+  caption.className = 'fg-caption';
+  caption.textContent = item.title || `Featured Event ${idx}`;
+
+  slide.appendChild(img);
+  slide.appendChild(caption);
+  track.appendChild(slide);
+});
 
       slides = Array.from(track.querySelectorAll('.fg-slide'));
       updateSlides();
