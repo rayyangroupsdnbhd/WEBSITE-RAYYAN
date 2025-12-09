@@ -189,7 +189,7 @@ html{
 /* ---------------------- */
 .service-media {
   width: 100%;
-  height: 250px;           /* Adjust height as needed */
+  height: 200px;           /* Adjust height as needed */
   border: 2px solid rgba(231,201,128,.35);  /* Matches your existing theme */
   overflow: hidden;        /* Keeps images inside container */
   border-radius: 10px;     /* Rounded corners */
