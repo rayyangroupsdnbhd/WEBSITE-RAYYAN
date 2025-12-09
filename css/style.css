@@ -195,6 +195,12 @@ html{
   border-radius: 10px;     /* Rounded corners */
   margin-bottom: 15px;     /* Space below the image box */
 }
+.service-media img {
+  width: 100%;         /* image takes full width of container */
+  height: 100%;        /* image takes full height of container */
+  object-fit: cover;   /* fills container while keeping aspect ratio, may crop */
+  display: block;      /* removes small gaps below image */
+}
 
 /* ===== Featured Events Gallery: 3‑card carousel ===== */
 .gallery-wrapper{
