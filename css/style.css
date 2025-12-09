@@ -115,6 +115,13 @@ html{
 }
 
 /* Services full-width rows */
+:root {
+  --panel-border-width: 2px;        /* thickness of main panel border */
+  --panel-border-radius: 20px;      /* rounded corners for panels */
+  --media-border-width: 2px;        /* right border of media container */
+  --media-border-radius: 20px;      /* rounded corners for left image */
+  --border-color: rgba(231,201,128,.35); /* consistent color */
+}
 .services-layout{
   align-items:flex-start;
 }
