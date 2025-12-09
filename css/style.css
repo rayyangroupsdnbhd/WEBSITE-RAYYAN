@@ -116,7 +116,7 @@ html{
 
 /* Services full-width rows */
 :root {
-  --panel-border-width: 3px;        /* thickness of main panel border */
+  --panel-border-width: 2px;        /* thickness of main panel border */
   --panel-border-radius: 20px;      /* rounded corners for panels */
   --media-border-width: 2px;        /* right border of media container */
   --media-border-radius: 20px;      /* rounded corners for left image */
@@ -133,7 +133,7 @@ html{
   flex-direction:column;
   gap:24px;
   width:100%;
-  max-width:1300px;
+  max-width:900px;
   margin:24px auto 0;
 }
 .service-panel{
