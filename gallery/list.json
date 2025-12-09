@@ -1,10 +1,10 @@
 {
   "images": [
-    { "src": "1.jpg", "index": 1, "title": "Opening Event" },
-    { "src": "2.jpg", "index": 2, "title": "Launch Party" },
-    { "src": "3.jpg", "index": 3, "title": "Conference Day 1" },
-    { "src": "4.jpg", "index": 4, "title": "Conference Day 2" },
-    { "src": "5.jpg", "index": 5, "title": "Award Night" },
-    { "src": "6.jpg", "index": 6, "title": "Closing Ceremony" }
+    { "src": "1.jpg", "index": 1 },
+    { "src": "2.jpg", "index": 2 },
+    { "src": "3.jpg", "index": 3 },
+    { "src": "4.jpg", "index": 4 },
+    { "src": "5.jpg", "index": 5 },
+    { "src": "6.jpg", "index": 6 }
   ]
 }
