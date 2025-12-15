@@ -814,3 +814,16 @@ html{
     padding:10px 14px;
   }
 }
+@media (max-width: 640px){
+  .service-panel-body{
+    padding:18px;
+  }
+
+  .service-panel-body h3{
+    font-size:1.05rem;
+  }
+
+  .service-panel-body ul{
+    font-size:.92rem;
+  }
+}
