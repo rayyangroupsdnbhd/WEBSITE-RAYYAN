@@ -805,3 +805,12 @@ html{
     max-height:480px;
   }
 }
+
+@media (max-width: 640px){
+  .whatsapp{
+    right:12px;
+    bottom:12px;
+    font-size:.9rem;
+    padding:10px 14px;
+  }
+}
