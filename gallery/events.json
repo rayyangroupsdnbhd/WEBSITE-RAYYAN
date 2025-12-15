@@ -54,6 +54,11 @@
       "folder": "event11",
       "cover": "1.jpg",
       "title": "Event11"
+      },
+    {
+      "folder": "event12",
+      "cover": "1.jpg",
+      "title": "Event12"
     }
   ]
 }
