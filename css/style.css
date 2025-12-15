@@ -765,3 +765,43 @@ html{
   cursor: auto;
   transition: transform 0.3s ease;
 }
+
+/* Hamburger button */
+.nav-toggle{
+  display:none;
+  background:none;
+  border:0;
+  color:var(--gold);
+  font-size:1.8rem;
+  cursor:pointer;
+}
+
+/* Mobile nav */
+@media (max-width: 768px){
+  .nav-toggle{ display:block; }
+
+  nav{
+    position:absolute;
+    top:100%;
+    left:0;
+    right:0;
+    background:rgba(10,12,15,.95);
+    backdrop-filter:blur(12px);
+    flex-direction:column;
+    gap:0;
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .35s ease;
+    border-bottom:1px solid rgba(231,201,128,.18);
+  }
+
+  nav a{
+    padding:18px;
+    width:100%;
+    text-align:center;
+  }
+
+  nav.open{
+    max-height:480px;
+  }
+}
