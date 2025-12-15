@@ -827,3 +827,23 @@ html{
     font-size:.92rem;
   }
 }
+@media (max-width: 768px){
+  .hero{
+    min-height:85svh;
+    padding:60px 0;
+  }
+
+  .hero h1{
+    font-size:2rem;
+  }
+
+  .hero p{
+    font-size:.95rem;
+  }
+
+  /* Reduce background animation cost */
+  .bg-orbit{
+    opacity:.5;
+    animation:none;
+  }
+}
