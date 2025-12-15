@@ -128,4 +128,19 @@ const filmEase=cubicBezier(.77,0,.175,1);
   window.addEventListener('scroll',toggle,{passive:true});
 })();
 
+// Mobile nav toggle
+(function(){
+  const btn = document.querySelector('.nav-toggle');
+  const nav = document.querySelector('header nav');
+  if(!btn || !nav) return;
+
+  btn.addEventListener('click', () => {
+    nav.classList.toggle('open');
+  });
+
+  // Close menu on link click
+  nav.querySelectorAll('a').forEach(a=>{
+    a.addEventListener('click',()=>nav.classList.remove('open'));
+  });
+})();
 
