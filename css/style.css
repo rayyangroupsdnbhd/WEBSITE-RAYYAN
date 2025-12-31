@@ -210,6 +210,10 @@ html{
   object-fit: cover;   /* fills container while keeping aspect ratio, may crop */
   display: block;      /* removes small gaps below image */
 }
+.services-layout h2 {
+  text-align: center;
+  width: 100%;
+}
 
 /* ===== Featured Events Gallery: 3‑card carousel ===== */
 .gallery-wrapper{
